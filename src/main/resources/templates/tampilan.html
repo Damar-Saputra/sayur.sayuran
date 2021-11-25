@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Sayur Sayuran</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 th:text="${pasar}"></h1>
+            <div>Daftar Harga</div>
+            <hr><!--garis -->
+        <table border="1">
+            
+            <tr>
+                <th>Nama</th>
+                <th>Harga</th>
+            </tr>
+            <tr th:each="produk:${listsayuran}">
+                <td th:text="${produk[0]}"></td>
+                <td th:text="${produk[1]}"></td>
+            </tr>
+
+        </table>
+    </body>
+</html>
